@@ -12,7 +12,10 @@ content: [
   theme: {
     extend: {
       colors: {
-        'foundation-bg': '#d18b11',
+        'foundation-bg': '#fcf0dc',
+        'footer-green': '#008000',
+        'footer-brown': '#d18b11',
+        'cream': '#fcf0dc',
       },
     },
   },

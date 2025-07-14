@@ -8,8 +8,7 @@ const images = ["/image1.jpeg", "/image2.jpeg", "/image3.jpeg"];
 const newsItems = [
   {
     image: "/image1.jpeg",
-    title:
-      "YOuth accessibility to social care in Ebonyi State",
+    title: "YOuth accessibility to social care in Ebonyi State",
     date: "Jun 5, 2025",
     summary:
       "On June 2, 2025, in a significant move to advance Nigeria’s healthcare system, the TY Danjuma Foundation (TYDF) and the World Health Organization (WHO) signed a multi...",
@@ -24,8 +23,7 @@ const newsItems = [
   },
   {
     image: "/image3.jpeg",
-    title:
-      "Enhancing Food Security and Nutrition in Wassa IDP Camp",
+    title: "Enhancing Food Security and Nutrition in Wassa IDP Camp",
     date: "May 21, 2025",
     summary:
       "In March 2025, the TY Danjuma Foundation (TYDF), in partnership with the Social Welfare Network Initiative (SWNI), distributed food to displaced persons at the Wassa IDP...",
@@ -51,11 +49,11 @@ export default function Home() {
   };
 
   return (
-    <main className="space-y-2">
-      {/* Carousel Section */}
-      <section className="relative h-[50vh] w-full overflow-hidden">
+    <main className="m-0 p-0">
+      <div className="h-10" />
+      <section className="relative h-[55vh] w-full">
         <div
-          className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+          className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
           style={{ backgroundImage: `url(${images[index]})` }}
         />
         <div className="absolute inset-0 bg-black/30" />
@@ -78,35 +76,37 @@ export default function Home() {
       </section>
 
       {/* Section 2: Our Impact */}
-      <section id="section2" className="pt-8 px-4 text-center text-blue-700">
+      <section id="section2" className=" bg-footer-brown text-center text-black pt-6 pb-2">
         <h2 className="text-2xl font-bold mb-10">OUR IMPACT</h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="flex flex-col items-center space-y-2">
             <span className="text-4xl">💵</span>
             <p className="text-xl font-bold">$41.5 Million</p>
-            <p className="text-sm text-blue-600">Awarded in Grants</p>
+            <p className="text-md text-black">Awarded in Grants</p>
           </div>
           <div className="flex flex-col items-center space-y-2">
             <span className="text-4xl">🖥️</span>
             <p className="text-xl font-bold">Over 340 Projects</p>
-            <p className="text-sm text-blue-600">Implemented</p>
+            <p className="text-md text-black">Implemented</p>
           </div>
           <div className="flex flex-col items-center space-y-2">
             <span className="text-4xl">🗺️</span>
             <p className="text-xl font-bold">Across 36 States</p>
-            <p className="text-sm text-blue-600">and the FCT</p>
+            <p className="text-md text-black">and the FCT</p>
           </div>
           <div className="flex flex-col items-center space-y-2">
             <span className="text-4xl">👥</span>
             <p className="text-xl font-bold">More than 10 Million</p>
-            <p className="text-sm text-blue-600">People reached</p>
+            <p className="text-md text-black">People reached</p>
           </div>
         </div>
       </section>
 
       {/* Section 3: Latest News */}
-      <section id="section3" className="py-16 bg-white px-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-10">LATEST NEWS</h2>
+      <section id="section3" className="py-16 border-y border-gray-200">
+        <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">
+          LATEST NEWS
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {newsItems.map((news, i) => (
             <div
@@ -121,17 +121,21 @@ export default function Home() {
               <div className="p-4 space-y-2 text-left">
                 <h3 className="font-semibold text-gray-800">{news.title}</h3>
                 <p className="text-sm text-gray-500">{news.date}</p>
-                <p className="text-sm text-gray-700 line-clamp-3">{news.summary}</p>
+                <p className="text-sm text-gray-700 line-clamp-3">
+                  {news.summary}
+                </p>
               </div>
             </div>
           ))}
         </div>
         <div className="text-blue-600 text-sm mt-6 text-left max-w-7xl mx-auto">
-          <a href="#" className="hover:underline">« Older Entries</a>
+          <a href="#" className="hover:underline">
+            « Older Entries
+          </a>
         </div>
       </section>
 
-      {/* Section 4 */}
+      {/* Section 4 (optional placeholder) */}
       {/* <section
         id="section4"
         className="h-screen bg-gray-300 flex items-center justify-center"

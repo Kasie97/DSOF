@@ -1,4 +1,4 @@
-export default function Scholarship() {
+export default function Blog() {
  return <>
            <section
   className="pt-4 h-60 flex items-center justify-center"
@@ -12,8 +12,8 @@ export default function Scholarship() {
     )`
   }}
 >
-  <h1 className="text-white text-4xl font-bold">Scholarships</h1>
+  <h1 className="text-white text-4xl font-bold">Latest News</h1>
 </section>
-  <div>This is Scholarship Page</div>;
+  <div>This is Blog Page</div>;
   </>
 }

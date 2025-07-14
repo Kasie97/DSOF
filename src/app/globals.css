@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 
-body {
+/* body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  background-color: #fcf0dc;
+  background-color: #fcf0dc; */
 
-}
+/* } */
 
-/* html,
 body {
   background-color: #fcf0dc;
-} */
+}
+/* d18b11 */

@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
-        <main style={{ padding: "1rem" }}>{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

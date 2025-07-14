@@ -1,11 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { IoIosAddCircle } from 'react-icons/io';
 
 const newsItems = [
   {
     image: "/image1.jpeg",
-    summary: `On June 2, 2025, in a significant move to advance Nigeria’s healthcare system, the TY Danjuma Foundation (TYDF) and the World Health Organization (WHO) signed a multi-year agreement to strengthen healthcare accessibility in underserved communities. The partnership aims to deliver essential medical resources, support training for health workers, and establish mobile clinics across rural areas.`,
+    summary: `On June 2, 2025, in a significant move to advance Nigeria’s healthcare system, the TY Danjuma Foundation (TYDF) and the World Health Organization (WHO) signed a multi-year agreement to strengthen healthcare accessibility in underserved communities. The partnership aims to deliver essential medical resources, support training for health workers, and establish mobile clinics across rural areas.On June 2, 2025, in a significant move to advance Nigeria’s healthcare system, the TY Danjuma Foundation (TYDF) and the World Health Organization (WHO) signed a multi-year agreement to strengthen healthcare accessibility in underserved communities. The partnership aims to deliver essential medical resources, support training for health workers, and establish mobile clinics across rural areas.`,
   },
 ];
 
@@ -19,6 +20,11 @@ const infoItems = [
     label: "Vision",
     content:
       "A Nigeria where every individual has access to the basic social services needed to thrive and contribute meaningfully to society.",
+  },
+  {
+    label: "Main Goals",
+    content:
+      "Enhance community health care by providing free medical services to rural communities which lack adequate medical facilities. Improve the quality of education of children and young people and Alleviate the extreme poverty in communities across the country by providing humanitarian assistance, clean drinking water, and encouraging the empowerment of women",
   },
   {
     label: "Core Values",
@@ -55,11 +61,9 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-black/30" />
       </section>
 
-      {/* Image + Summary + Info Buttons Section */}
-      <section id="section3" className="p-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
-          {/* Image + Summary Block */}
-          <div>
+      <section id="section3" className="py-6 px-24">
+        <div className="grid grid-cols-5 gap-6 max-w-7xl mx-auto">
+          <div className="col-span-2">
             {newsItems.map((news, i) => (
               <div key={i}>
                 <img
@@ -72,15 +76,15 @@ export default function AboutUs() {
             ))}
           </div>
 
-          {/* Button + Dropdown Info Block */}
-          <div className="space-y-4">
+          <div className="col-span-3 space-y-4">
             {infoItems.map(({ label, content }) => (
               <div key={label} className="border border-gray-200 rounded">
                 <button
                   onClick={() => toggleItem(label)}
-                  className="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 text-sm font-medium"
+                  className="w-full flex items-center justify-between px-4 py-6 bg-cream shadow-sm hover:bg-footer-brown text-xl font-medium transition-shadow duration-200"
                 >
-                  {label}
+                  <span>{label}</span>
+                  <IoIosAddCircle className="text-xl text-gray-600" />
                 </button>
                 {openItem === label && (
                   <div className="px-4 py-3 text-sm text-gray-700 bg-white border-t border-gray-200 transition-all duration-300">
