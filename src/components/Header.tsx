@@ -8,6 +8,7 @@ import { IoMdMenu, IoMdClose } from 'react-icons/io';
 const navLinks = [
   {
     label: 'Who we are',
+    href: '/about-us',
     links: [
       { label: 'About Us', href: '/about-us' },
       { label: 'Board of Trustees', href: '/board-of-trustees' },
@@ -16,6 +17,7 @@ const navLinks = [
   },
   {
     label: 'Programs',
+    href: '/programs',
     links: [
       { label: 'Scholarships', href: '/programs/scholarship' },
       { label: 'Medicals', href: '/programs/medicals' },
@@ -76,27 +78,40 @@ const Header = () => {
         >
           {navLinks.map((group, i) => (
             <div key={i} className="relative group">
-              <button className={`transition-colors duration-200 ${navTextClass}`}>
-                {group.label}
-              </button>
-              <div
-                className={`absolute left-0 top-full mt-2 p-4 rounded-md shadow-lg ${dropdownBg} backdrop-blur-sm invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 min-w-[200px]`}
-              >
-                <ul className="space-y-2 text-sm">
-                  {group.links.map((link, j) => (
-                    <li key={j}>
-                      <Link
-                        href={link.href}
-                        className="block hover:text-green-700 transition"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {group.href ? (
+                <Link
+                  href={group.href}
+                  className={`transition-colors duration-200 ${navTextClass}`}
+                >
+                  {group.label}
+                </Link>
+              ) : (
+                <span className={`transition-colors duration-200 ${navTextClass}`}>
+                  {group.label}
+                </span>
+              )}
+
+              {group.links && (
+                <div
+                  className={`absolute left-0 top-full mt-2 p-4 rounded-md shadow-lg ${dropdownBg} backdrop-blur-sm invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 min-w-[200px]`}
+                >
+                  <ul className="space-y-2 text-sm">
+                    {group.links.map((link, j) => (
+                      <li key={j}>
+                        <Link
+                          href={link.href}
+                          className="block hover:text-green-700 transition"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           ))}
+
           {simpleLinks.map((link, i) => (
             <Link
               key={i}
@@ -129,6 +144,7 @@ const Header = () => {
             <div>
               <p className="font-semibold">Programs</p>
               <div className="pl-4 space-y-1">
+                <Link href="/programs">Programs</Link><br />
                 <Link href="/programs/scholarship">Scholarships</Link><br />
                 <Link href="/programs/medicals">Medicals</Link><br />
                 <Link href="/programs/sports">Sports</Link>
@@ -142,7 +158,7 @@ const Header = () => {
               </div>
             </div>
             <Link href="/faq">FAQ</Link><br />
-            <Link href="/register">Registration Page</Link>
+            <Link href="/register">Registration Page</Link><br />
             <Link href="/contact-us">Contact Us</Link>
           </div>
         )}
