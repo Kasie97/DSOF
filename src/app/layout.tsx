@@ -9,8 +9,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dr. Solomon Otobo Foundation",
-  description: "Official website of the Dr. Solomon Otobo Foundation",
+  title: "Dr. Solomon Otubo Foundation",
+  description: "Official website of the Dr. Solomon Otubo Foundation",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

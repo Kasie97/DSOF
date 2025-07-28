@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const images = ["/image1.jpeg", "/image2.jpeg", "/image3.jpeg"];
+const images = ["/image4.webp", "/image5.jpeg", "/image6.jpeg", "/image7.jpeg"];
 
 const newsItems = [
   {

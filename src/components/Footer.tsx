@@ -8,7 +8,7 @@ export default function Footer() {
     <p><strong>Email:</strong> obi@dsof@gmail.com</p>
   </div>
   <div style={{ textAlign: "center" }}>
-      <p>&copy; 2025 Dr. Solomon Otobo Foundation</p>
+      <p>&copy; 2025 Dr. Solomon Otubo Foundation</p>
     </div>
   </>
 };

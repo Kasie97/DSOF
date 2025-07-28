@@ -63,7 +63,7 @@ const Header = () => {
           <div className="transition-opacity duration-300">
             <Link href="/">
               <Image
-                src="/foundation-log.png"
+                src="/dsof.svg"
                 alt="DSOF Logo"
                 width={400}
                 height={80}
